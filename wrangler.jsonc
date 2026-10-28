@@ -1,0 +1,11 @@
+// Cloudflare Workers settings for the static site in dist/.
+{
+  "name": "we-health-v2",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./dist",
+    // Serve /treatments.html at /treatments with no trailing-slash redirect.
+    "html_handling": "drop-trailing-slash",
+    "not_found_handling": "404-page"
+  }
+}

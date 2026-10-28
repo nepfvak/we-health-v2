@@ -1,8 +1,5 @@
-# TEMPORARY (preview only): keep the Cloudflare preview addresses out of Google.
-# Only matches the workers.dev / pages.dev preview hosts, never wehealthinstitute.com.
-# Remove at launch; see LAUNCH-CHECKLIST.md.
-https://we-health-v2.blake-stwrt20.workers.dev/*
-  X-Robots-Tag: noindex
-
-https://:project.pages.dev/*
+# TEMPORARY (preview only): tells search engines not to index the site.
+# This applies to EVERY address, including wehealthinstitute.com once it points here.
+# DELETE THIS FILE BEFORE LAUNCH (first item in LAUNCH-CHECKLIST.md, section 3).
+/*
   X-Robots-Tag: noindex

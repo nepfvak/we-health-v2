@@ -21,7 +21,7 @@ Work through this before switching wehealthinstitute.com from GoDaddy to the new
 
 ## 3. Go live
 
-- [ ] **Remove the preview noindex rule:** delete `public/_headers` (it only holds the preview noindex rules), commit and push
+- [ ] **Remove the preview noindex rule, before pointing the domain here:** delete `public/_headers`, commit and push. It hides the whole site from Google, on every address. Confirm afterwards that `curl -sI https://wehealthinstitute.com/` shows no `X-Robots-Tag` line.
 - [ ] Create the project in the clinic’s Cloudflare account the same way as the preview (Workers & Pages → import the Git repo, build command `npm run build`)
 - [ ] Add `wehealthinstitute.com` to Cloudflare and check the scanned DNS records, **especially email (MX, SPF, DKIM, DMARC)**, before changing anything
 - [ ] Switch the nameservers at GoDaddy to the two Cloudflare provides
