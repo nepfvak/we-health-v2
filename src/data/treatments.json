@@ -4,7 +4,7 @@
     "kind": "condition",
     "name": "Pain",
     "summary": "Back, neck, joints, migraines, sciatica, old injuries",
-    "lede": "Acupuncture is one of the most widely used treatments for pain of almost every kind.",
+    "lede": "Acupuncture is one of the most widely used treatments for pain.",
     "image": "pain",
     "image_alt": "An older woman holding her sore wrist",
     "body": [
@@ -259,8 +259,8 @@
     "name": "Acupuncture",
     "summary": "Fine, sterile needles at precise points to restore balance",
     "lede": "Sterile, hair-thin needles placed at specific points to relieve symptoms and help the body rebalance itself.",
-    "image": "ear-needle",
-    "image_alt": "A practitioner placing a fine needle in a patient’s ear",
+    "image": "saat",
+    "image_alt": "A gloved practitioner placing a fine needle in a patient’s ear",
     "body": [
       {
         "heading": "What it is",

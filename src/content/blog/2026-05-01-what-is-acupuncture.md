@@ -3,7 +3,7 @@ title: What Is Acupuncture?
 slug: what-is-acupuncture
 date: 2026-05-01T09:00:00.000Z
 author: Dr. Yingjuan Liang (Selina)
-image: ear-needle
+image: saat
 excerpt: Acupuncture is one of the oldest medical practices in the world — using hair-thin sterile needles placed along the body's meridians to release stagnation and restore the natural flow of qi.
 ---
 
