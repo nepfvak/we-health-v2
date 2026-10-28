@@ -27,6 +27,8 @@ Use the build command `npm run build` with output directory `dist`. Point the we
 
 ## Still to do
 
+See `LAUNCH-CHECKLIST.md` for the go-live steps.
+
 - Storyblok: create the space and block schemas matching `src/blocks/`, then load stories in `src/lib/content.ts`. Add a publish webhook that triggers a Cloudflare Pages deploy hook.
 - Clinic review of the treatment, bio and blog copy.
 - Owner approvals: the homepage headline, photo licences (see the origin note embedded in each photo), and the footer emergency disclaimer.
