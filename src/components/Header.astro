@@ -6,7 +6,7 @@ const site = getSite();
 <header class="header" data-header>
   <div class="wrap bar">
     <a class="brand" href="/" aria-label={`${site.name}, home`}>
-      <img src="/logo-mark.png" alt="" width="40" height="40" />
+      <img src="/logo-mark.svg" alt="" width="52" height="52" />
       <span>W&amp;E Health Institute</span>
     </a>
     <nav class="nav" aria-label="Main">
@@ -65,10 +65,10 @@ const site = getSite();
   .header.is-scrolled, .header.is-open { border-bottom-color: var(--rule); }
   .bar { display: flex; align-items: center; gap: 24px; height: 76px; }
   .brand {
-    display: flex; align-items: center; gap: 12px; text-decoration: none;
+    display: flex; align-items: center; gap: 14px; text-decoration: none;
     font-family: var(--font-display); font-size: var(--step-1); letter-spacing: -0.01em; white-space: nowrap;
   }
-  .brand img { width: 40px; height: 40px; }
+  .brand img { width: 52px; height: 52px; }
   .nav { margin-left: auto; }
   .nav ul { display: flex; gap: 28px; list-style: none; margin: 0; padding: 0; }
   .nav a { text-decoration: none; font-weight: 500; font-size: 0.975rem; color: var(--ink-2); }
@@ -111,7 +111,7 @@ const site = getSite();
   @media (max-width: 560px) {
     .bar { height: 64px; }
     .brand { font-size: var(--step-0); }
-    .brand img { width: 34px; height: 34px; }
+    .brand img { width: 42px; height: 42px; }
     .book { display: none; }
   }
 </style>
