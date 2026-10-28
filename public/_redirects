@@ -1,0 +1,11 @@
+# Old GoDaddy Website Builder pages -> new pages (permanent, keeps search rankings)
+/about                    /doctors                  301
+/about/                   /doctors                  301
+/services                 /treatments               301
+/services/                /treatments               301
+/conditions               /treatments               301
+/conditions/              /treatments               301
+/testimonials             /reviews                  301
+/testimonials/            /reviews                  301
+/saat-allergy-treatment   /treatments/saat-allergy  301
+/saat-allergy-treatment/  /treatments/saat-allergy  301
