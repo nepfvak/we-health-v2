@@ -21,16 +21,16 @@ Work through this before switching wehealthinstitute.com from GoDaddy to the new
 
 ## 3. Go live
 
-- [ ] **Remove the preview noindex rule:** delete `public/_headers` (or its `pages.dev` blocks), commit and push
-- [ ] Create the Pages project in the clinic’s Cloudflare account (preset Astro, build `npm run build`, output `dist`)
+- [ ] **Remove the preview noindex rule:** delete `public/_headers` (it only holds the preview noindex rules), commit and push
+- [ ] Create the project in the clinic’s Cloudflare account the same way as the preview (Workers & Pages → import the Git repo, build command `npm run build`)
 - [ ] Add `wehealthinstitute.com` to Cloudflare and check the scanned DNS records, **especially email (MX, SPF, DKIM, DMARC)**, before changing anything
 - [ ] Switch the nameservers at GoDaddy to the two Cloudflare provides
-- [ ] Add `wehealthinstitute.com` and `www.wehealthinstitute.com` as custom domains on the Pages project
+- [ ] Add `wehealthinstitute.com` and `www.wehealthinstitute.com` as custom domains on that project
 - [ ] Confirm the site loads on both addresses with HTTPS
 - [ ] Test the old-address redirects: `/about`, `/services`, `/conditions`, `/testimonials`, `/saat-allergy-treatment`
 - [ ] Test Book online (Jane), tap-to-call on a phone, the map, and the gift card link
 - [ ] Send a test email to the clinic’s domain address to confirm email still works
-- [ ] Delete the preview Pages project in your own Cloudflare account
+- [ ] Delete the preview project (`we-health-v2.blake-stwrt20.workers.dev`) in your own Cloudflare account
 
 ## 4. After launch
 
