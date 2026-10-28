@@ -1,0 +1,59 @@
+[
+  {
+    "slug": "selina-liang",
+    "name": "Dr. Yingjuan (Selina) Liang",
+    "short_name": "Dr. Liang",
+    "degrees": "DACM, L.Ac.",
+    "photo": "dr-liang",
+    "photo_zoom": 1.3,
+    "photo_position": "50% 22%",
+    "lede": "A doctor of acupuncture and Chinese medicine licensed in Tennessee and Mississippi, with a special focus on pain, women’s health and fertility, allergies and neurological conditions.",
+    "focus": "Pain, women’s health & fertility, allergies, neurological conditions",
+    "about": [
+      "Dr. Liang grew up in a family of doctors and was shaped not only by her parents’ skill but by the care they showed their patients. She trained under several prominent Chinese medicine masters in China and the United States.",
+      "In practice she combines Modern Abdominal Acupuncture with tongue diagnosis, and draws on Jiao’s scalp acupuncture, Tung’s acupuncture, motion-style acupuncture, Five Element and traditional acupuncture, supported by herbal prescriptions. Her philosophy is “harmonizing body and mind, nurturing both form and spirit,” and she treats both adults and children."
+    ],
+    "specialties": ["Pain management", "Women’s health, gynecology and fertility", "Emotional and psychological wellbeing", "Neurological conditions", "SAAT for Alpha-gal, pollen, environmental and food allergies", "Cosmetic acupuncture and facial rejuvenation", "Pediatric care"],
+    "credentials": [
+      "Doctorate in Acupuncture and Chinese Medicine (DACM)",
+      "Licensed acupuncturist and herbalist in Tennessee and Mississippi",
+      "Board-certified Diplomate of Oriental Medicine (NCCAOM)",
+      "Direct disciple of Prof. Ying Wang, master of Modern Abdominal Diagnosis and Acupuncture, and the only overseas successor with official master-disciple recognition",
+      "One of twelve practitioners selected nationwide for the inaugural Overseas Chinese Medicine Mentorship in the USA, studying reproductive health and infertility under Prof. Ming Jin",
+      "Certified in Soliman Auricular Allergy Treatment (SAAT), trained directly by Dr. Nader Soliman",
+      "Deputy Secretary General and Executive Director, World Federation of Chinese Medicine Societies, Scalp Needle Committee",
+      "Certificate in “All-around TCM Techniques”, Chinese Bureau of TCM Administration; member of the China Association of Acupuncture-Moxibustion",
+      "Member, American Traditional Chinese Medicine Society (ATCMS) and American Traditional Chinese Medicine Association (ATCMA)"
+    ],
+    "community": "Secretary-General of the Mid-South Chinese Chamber of Commerce, board member of the Greater Memphis United Federation, and co-chair of the inaugural 2025 Memphis Lunar New Year Fair."
+  },
+  {
+    "slug": "tieqiang-zhao",
+    "name": "Dr. Tieqiang Zhao",
+    "short_name": "Dr. Zhao",
+    "degrees": "MD/PhD (China), L.Ac.",
+    "photo": "dr-zhao",
+    "photo_zoom": 1,
+    "photo_position": "50% 30%",
+    "lede": "A physician trained in Western internal medicine and cardiology who now practices acupuncture, Chinese medicine, Tai Chi and Medical Qigong, with more than 20 years of clinical experience.",
+    "focus": "Cardiac and internal medicine, chronic illness, Tai Chi & Medical Qigong",
+    "about": [
+      "Dr. Zhao graduated from the seven-year Clinical Medicine program at Harbin Medical University, then completed a three-year doctoral program, earning both his MD and PhD. He served as an Attending Physician in Internal Medicine at Harbin Medical University and as an Associate Professor at Peking University Health Science Center. In the United States he was an Assistant Professor in the Department of Internal Medicine at the University of Arizona.",
+      "He completed an advanced apprenticeship in Chinese medicine under Alex Li, studied Tai Chi with Masters Zhibin Zhang and Songquan Yang, and Medical Qigong with Masters Qiduan Li and Junfeng Li.",
+      "Years of caring for patients with advanced illness gave him a deep respect for both the power and the limits of modern medicine, and a conviction that the best care also helps prevent illness. He treats the whole person, combining Western medicine, Chinese medicine, Tai Chi and Medical Qigong."
+    ],
+    "specialties": ["Functional heart and circulation concerns", "Internal medicine and chronic illness", "Pain", "SAAT allergy treatment", "Tai Chi and Medical Qigong"],
+    "credentials": [
+      "MD and PhD, Harbin Medical University",
+      "Licensed acupuncturist in Tennessee",
+      "Board-certified Diplomate of Acupuncture (NCCAOM)",
+      "Certified SAAT allergy treatment provider",
+      "More than 20 years of clinical experience",
+      "Executive Director, World Federation of Chinese Medicine Societies, Cardiovascular Disease Committee",
+      "Professional member, American Heart Association and American Stroke Association",
+      "Former Program Director and Principal Investigator of an NIH-funded research grant",
+      "Patent holder and author of peer-reviewed journal articles and medical book chapters",
+      "National-level judge of Tai Chi and Kung Fu, USA Wushu Kungfu Federation; member, Tai Chi Qigong Association of America"
+    ]
+  }
+]

@@ -1,0 +1,58 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHeader from '../components/PageHeader.astro';
+import BookBand from '../components/BookBand.astro';
+import Veterans from '../blocks/Veterans.astro';
+import Icon from '../components/Icon.astro';
+import { getSite, getStory } from '../lib/content';
+
+const site = getSite();
+const home = await getStory('home');
+const vet = home.content.body.find((b) => b.component === 'veterans')!;
+const steps = { ...vet, heading: 'How to get started', body: 'Three steps, and there’s no extra paperwork for you once the VA approves your referral.', cta_label: 'Call us with questions', cta_link: site.phone_href };
+
+const helps = [
+  { title: 'Chronic pain', detail: 'Joint pain, back pain, migraines and old service-connected injuries, with an option that doesn’t rely on opioids.' },
+  { title: 'PTSD and stress', detail: 'Acupuncture helps calm the nervous system and shift the body out of “fight or flight”.' },
+  { title: 'Sleep', detail: 'Easing the anxiety and hyper-vigilance that so often get in the way of rest.' },
+  { title: 'Emotional resilience', detail: 'Support for the invisible weight that service can leave behind.' },
+];
+---
+<Base title="Veterans care | W&E Health Institute" description="W&E Health Institute is an authorized VA Community Care Provider. Eligible Veterans can receive 12 to 28 acupuncture treatments a year at no cost to them.">
+  <PageHeader
+    title="Veterans: your acupuncture may cost you nothing."
+    lede="We’re an authorized VA Community Care Provider. With a referral from your VA doctor, eligible Veterans can receive 12 to 28 acupuncture treatments a year at no cost to them."
+    image="cupping"
+    imageAlt="Glass cupping jars placed along a patient’s back during treatment"
+    imagePosition="50% 12%"
+  >
+    <div class="cta">
+      <a class="btn btn-primary" href={site.booking_url}><Icon name="calendar" />Book online</a>
+      <a class="btn btn-outline" href={site.phone_href}><Icon name="phone" />Call {site.phone}</a>
+    </div>
+  </PageHeader>
+  <Veterans blok={steps} />
+  <section class="section help stone-ground">
+    <div class="wrap layout">
+      <div>
+        <h2>How acupuncture can help</h2>
+        <p class="lede">The transition from service to civilian life can bring physical and emotional strain that conventional care alone doesn’t always reach.</p>
+      </div>
+      <dl>
+        {helps.map((h) => <div><dt>{h.title}</dt><dd>{h.detail}</dd></div>)}
+      </dl>
+    </div>
+  </section>
+  <BookBand heading="Questions about your referral?" body="Call us and we’ll walk you through it. Or, if you already have VA authorization, book your first visit online." />
+</Base>
+
+<style>
+  .help { background: var(--stone); }
+  .layout { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: clamp(32px, 6vw, 112px); align-items: start; }
+  .lede { margin-top: 20px; }
+  dl { margin: 0; border-top: 1px solid var(--rule); }
+  dl > div { padding: 22px 0; border-bottom: 1px solid var(--rule); }
+  dt { font-family: var(--font-display); font-size: var(--step-2); line-height: 1.2; }
+  dd { margin: 6px 0 0; color: var(--ink-2); max-width: 52ch; }
+  @media (max-width: 900px) { .layout { grid-template-columns: 1fr; } }
+</style>

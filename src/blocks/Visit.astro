@@ -1,0 +1,71 @@
+---
+import { Image } from 'astro:assets';
+import Icon from '../components/Icon.astro';
+import { photos } from '../lib/images';
+import { getSite, type Block } from '../lib/content';
+
+interface Props { blok: Block }
+const { blok } = Astro.props;
+const site = getSite();
+const mapSrc = `https://maps.google.com/maps?q=${encodeURIComponent(`${site.address_line1}, ${site.address_line2}`)}&z=15&output=embed`;
+---
+<section class="section visit" id={blok.anchor}>
+  <div class="wrap layout">
+    <div class="copy">
+      {blok.heading && <h2 data-reveal>{blok.heading}</h2>}
+      {blok.body && <p class="body">{blok.body}</p>}
+      <div class="cta">
+        <a class="btn btn-primary" href={site.booking_url}><Icon name="calendar" />Book online</a>
+        <a class="btn btn-outline" href={site.phone_href}><Icon name="phone" />{site.phone}</a>
+      </div>
+      <div class="facts">
+        <div>
+          <h3>Address</h3>
+          <p>{site.address_line1}<br />{site.address_line2}</p>
+          <a class="text-link" href={site.maps_url}>Get directions<Icon name="arrow-right" /></a>
+        </div>
+        <div>
+          <h3>Hours</h3>
+          <dl>
+            {site.hours.map((h) => <div><dt>{h.days}</dt><dd>{h.time}</dd></div>)}
+          </dl>
+        </div>
+      </div>
+    </div>
+    <div class="media">
+      <figure class="photo">
+        <Image src={photos[blok.image]} alt={blok.image_alt} widths={[340, 680]} sizes="(max-width: 900px) 50vw, 25vw" />
+      </figure>
+      <iframe class="map" title="Map to W&E Health Institute" src={mapSrc} loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+
+<style>
+  .layout { display: grid; grid-template-columns: 1fr 1.1fr; gap: clamp(40px, 6vw, 96px); align-items: stretch; }
+  .body { margin-top: 20px; font-size: var(--step-1); color: var(--ink-2); max-width: 44ch; line-height: 1.55; }
+  .cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+  .copy > .cta:first-child { margin-top: 0; }
+  .facts { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 48px; }
+  h3 { font-family: var(--font-body); font-size: 1rem; font-weight: 600; letter-spacing: 0; margin-bottom: 10px; }
+  .facts p { color: var(--ink-2); margin-bottom: 12px; }
+  dl { margin: 0; display: grid; gap: 6px; color: var(--ink-2); }
+  dl div { display: grid; gap: 0; }
+  dt { color: var(--ink); }
+  dd { margin: 0; font-variant-numeric: tabular-nums; }
+  .media { display: grid; grid-template-columns: 1fr 1.4fr; gap: 16px; }
+  .photo { margin: 0; border-radius: var(--radius); overflow: hidden; min-height: 320px; }
+  .photo :global(img) { width: 100%; height: 100%; object-fit: cover; }
+  .map {
+    width: 100%; height: 100%; min-height: 320px; border: 0; border-radius: var(--radius); background: var(--stone);
+    filter: grayscale(0.85) contrast(0.95) brightness(1.03);
+  }
+
+  @media (max-width: 900px) { .layout { grid-template-columns: 1fr; } }
+  @media (max-width: 560px) {
+    .media { grid-template-columns: 1fr; }
+    .photo { aspect-ratio: 4 / 3; min-height: 0; }
+    .facts { grid-template-columns: 1fr; gap: 24px; }
+    .cta { display: none; }
+  }
+</style>

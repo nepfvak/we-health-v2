@@ -1,0 +1,43 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHeader from '../components/PageHeader.astro';
+import Visit from '../blocks/Visit.astro';
+import Icon from '../components/Icon.astro';
+import { getSite, getStory } from '../lib/content';
+
+const site = getSite();
+const home = await getStory('home');
+const visit = home.content.body.find((b) => b.component === 'visit')!;
+---
+<Base title="Contact & directions | W&E Health Institute" description="Book online or call (901) 340-6433. W&E Health Institute, 985 Cordova Station Ave, Ste 101, Cordova, TN 38018. Open Monday to Saturday, 8am to 6pm.">
+  <PageHeader title="Contact & visit" lede="We’re in Cordova, serving Memphis, Germantown, Bartlett and the surrounding area. Book online any time, call during opening hours, or email us. We’re happy to answer questions before your first visit." />
+  <div class="visit-wrap"><Visit blok={{ ...visit, heading: '', body: '' }} /></div>
+  <section class="section more">
+    <div class="wrap layout">
+      <div>
+        <h2 class="t">Email</h2>
+        <p><a href={`mailto:${site.email}`}>{site.email}</a></p>
+      </div>
+      <div>
+        <h2 class="t">Gift cards</h2>
+        <p>Give someone the gift of care.</p>
+        <a class="text-link" href={site.gift_card_url}>Buy a gift card<Icon name="arrow-right" /></a>
+      </div>
+      <div>
+        <h2 class="t">Follow us</h2>
+        <p><a href={site.instagram_url}>Instagram</a> · <a href={site.facebook_url}>Facebook</a></p>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .visit-wrap :global(.visit) { padding-top: 0; }
+  .more { background: var(--stone); }
+  .layout { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+  .layout > div { padding-top: 22px; border-top: 1px solid var(--rule); }
+  .t { font-size: var(--step-2); line-height: 1.2; margin-bottom: 10px; }
+  p { color: var(--ink-2); margin-bottom: 12px; }
+  p a { color: var(--jade); font-weight: 500; }
+  @media (max-width: 760px) { .layout { grid-template-columns: 1fr; } }
+</style>

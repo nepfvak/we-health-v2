@@ -1,0 +1,27 @@
+---
+import Base from '../../layouts/Base.astro';
+import PageHeader from '../../components/PageHeader.astro';
+import BookBand from '../../components/BookBand.astro';
+import Doctors from '../../blocks/Doctors.astro';
+import { getDoctors } from '../../lib/content';
+
+const blok = {
+  _uid: 'doctors-page',
+  component: 'doctors',
+  heading: '',
+  intro: '',
+  doctors: getDoctors().map((d) => ({ ...d, credentials: d.credentials.slice(0, 4), link: `/doctors/${d.slug}` })),
+};
+---
+<Base title="Our doctors | W&E Health Institute" description="Meet Dr. Yingjuan (Selina) Liang, DACM, and Dr. Tieqiang Zhao, MD/PhD, the two doctors at W&E Health Institute in Cordova, TN.">
+  <PageHeader
+    title="Two doctors. Two traditions. One plan for you."
+    lede="One trained as a physician in Western internal medicine and cardiology, the other as a doctor of Chinese medicine under named masters. Both are licensed acupuncturists and board-certified NCCAOM Diplomates."
+  />
+  <div class="tight"><Doctors blok={blok} /></div>
+  <BookBand />
+</Base>
+
+<style>
+  .tight :global(.doctors) { padding-top: 0; }
+</style>

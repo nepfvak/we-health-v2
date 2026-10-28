@@ -1,0 +1,41 @@
+---
+import { Image } from 'astro:assets';
+import { photos } from '../lib/images';
+
+interface Props { title: string; lede?: string; image?: string; imageAlt?: string; imagePosition?: string }
+const { title, lede, image, imageAlt = '', imagePosition = '50% 50%' } = Astro.props;
+---
+<header class:list={['page-head', { 'has-image': image }]}>
+  <div class="wrap layout">
+    <div class="copy">
+      <h1>{title}</h1>
+      {lede && <p class="lede">{lede}</p>}
+      <slot />
+    </div>
+    {image && photos[image] && (
+      <figure class="photo">
+        <Image src={photos[image]} alt={imageAlt} widths={[640, 960, 1280, 1600, 2000]} sizes="(max-width: 860px) 100vw, 46vw" quality={82} loading="eager" fetchpriority="high" style={`object-position:${imagePosition}`} />
+      </figure>
+    )}
+  </div>
+</header>
+
+<style>
+  .page-head { padding-block: clamp(40px, 6vw, 88px) clamp(56px, 7vw, 104px); }
+  .layout { display: grid; gap: clamp(32px, 5vw, 80px); align-items: center; }
+  .has-image .layout { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  h1 { font-size: var(--step-3); max-width: 18ch; }
+  .lede { margin-top: 20px; }
+  .copy :global(.cta) { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+  .photo { margin: 0; border-radius: var(--radius); overflow: hidden; aspect-ratio: 5 / 4; background: var(--stone); }
+  .photo :global(img) { width: 100%; height: 100%; object-fit: cover; }
+
+  @media (max-width: 860px) {
+    .has-image .layout { grid-template-columns: 1fr; }
+    .photo { order: -1; aspect-ratio: 16 / 10; }
+  }
+  @media (max-width: 560px) {
+    .copy :global(.cta) { display: none; }
+    .photo { border-radius: var(--radius-sm); }
+  }
+</style>

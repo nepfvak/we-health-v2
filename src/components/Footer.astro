@@ -1,0 +1,82 @@
+---
+import Icon from './Icon.astro';
+import { getSite } from '../lib/content';
+const site = getSite();
+const year = new Date().getFullYear();
+---
+<footer class="footer on-pine">
+  <div class="wrap">
+    <div class="top">
+      <div class="lead">
+        <p class="name">W&amp;E Health Institute</p>
+        <p class="sub">{site.tagline} in Cordova, Tennessee.</p>
+        <div class="cta">
+          <a class="btn btn-primary" href={site.booking_url}>Book online</a>
+          <a class="btn btn-outline" href={site.phone_href}>{site.phone}</a>
+        </div>
+      </div>
+      <div class="cols">
+        <div>
+          <p class="col-title">Visit</p>
+          <address>
+            <a href={site.maps_url}>{site.address_line1}<br />{site.address_line2}</a>
+          </address>
+          <p>{site.hours_short}<br />Sunday closed</p>
+          <p><a href={`mailto:${site.email}`}>{site.email}</a></p>
+        </div>
+        <div>
+          <p class="col-title">Explore</p>
+          <ul>
+            {site.nav.map((item) => <li><a href={item.href}>{item.label}</a></li>)}
+            <li><a href="/blog">Blog</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="col-title">More</p>
+          <ul>
+            <li><a href={site.gift_card_url}><Icon name="gift" />Buy a gift card</a></li>
+            <li><a href={site.instagram_url}>Instagram</a></li>
+            <li><a href={site.facebook_url}>Facebook</a></li>
+          </ul>
+          <p class="status">{site.tai_chi_text}</p>
+        </div>
+      </div>
+    </div>
+    <div class="base">
+      <p>© {year} W&amp;E Health Institute. All rights reserved.</p>
+      <p>Acupuncture is not a substitute for emergency care. In an emergency, call 911.</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer { background: var(--pine); color: var(--on-pine); padding-block: clamp(64px, 8vw, 112px) 32px; }
+  .top { display: grid; grid-template-columns: 1fr 1.5fr; gap: clamp(40px, 6vw, 96px); }
+  .name { font-family: var(--font-display); font-size: var(--step-3); line-height: 1.05; letter-spacing: -0.02em; }
+  .sub { margin-top: 12px; color: var(--on-pine-2); }
+  .cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+  .cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+  .cols .col-title {
+    font-family: var(--font-body); font-size: 1rem; font-weight: 600; letter-spacing: 0;
+    margin-bottom: 16px; color: var(--on-pine);
+  }
+  ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+  address { font-style: normal; }
+  .cols p, .cols address { margin-bottom: 14px; color: var(--on-pine-2); }
+  .cols a { color: var(--on-pine-2); text-decoration: none; display: inline-flex; align-items: center; gap: 8px; }
+  .cols a:hover { color: var(--on-pine); text-decoration: underline; }
+  .cols :global(svg) { width: 17px; height: 17px; }
+  .status { font-size: var(--step--1); margin-top: 18px; }
+  .base {
+    margin-top: clamp(56px, 7vw, 96px); padding-top: 24px; border-top: 1px solid var(--pine-2);
+    display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 32px;
+    font-size: var(--step--1); color: var(--on-pine-2);
+  }
+  @media (max-width: 900px) {
+    .top { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 560px) {
+    .cols { grid-template-columns: 1fr 1fr; }
+    .cols > div:first-child { grid-column: 1 / -1; }
+  }
+</style>

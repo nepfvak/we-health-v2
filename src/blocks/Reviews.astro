@@ -1,0 +1,43 @@
+---
+import Icon from '../components/Icon.astro';
+import { getSite, type Block } from '../lib/content';
+
+interface Props { blok: Block }
+const { blok } = Astro.props;
+const site = getSite();
+---
+<section class="section reviews">
+  <div class="wrap">
+    <div class="head">
+      <h2 data-reveal>{blok.heading}</h2>
+      <a class="text-link" href={site.reviews_url}>{blok.cta_label}<Icon name="arrow-right" /></a>
+    </div>
+    <div class="grid">
+      {blok.reviews.map((r: Block) => (
+        <figure data-reveal>
+          <div class="stars" role="img" aria-label="5 out of 5 stars">
+            {[1, 2, 3, 4, 5].map(() => <Icon name="star" />)}
+          </div>
+          <blockquote><p>“{r.quote}”</p></blockquote>
+          <figcaption><strong>{r.name}</strong> · {blok.source_label}</figcaption>
+        </figure>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 16px 40px; }
+  .grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(32px, 4vw, 64px);
+    margin-top: clamp(40px, 5vw, 72px);
+  }
+  figure { margin: 0; padding-top: 28px; border-top: 1px solid var(--ink); display: flex; flex-direction: column; }
+  .stars { display: flex; gap: 3px; color: var(--root); }
+  .stars :global(svg) { width: 17px; height: 17px; fill: currentColor; stroke: none; }
+  blockquote { margin: 20px 0 24px; font-family: var(--font-display); font-size: var(--step-1); line-height: 1.5; }
+  figcaption { margin-top: auto; font-size: var(--step--1); color: var(--ink-2); }
+  figcaption strong { color: var(--ink); font-weight: 600; }
+
+  @media (max-width: 960px) { .grid { grid-template-columns: 1fr; max-width: 640px; } }
+</style>

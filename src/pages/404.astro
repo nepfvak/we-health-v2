@@ -1,0 +1,12 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHeader from '../components/PageHeader.astro';
+---
+<Base title="Page not found | W&E Health Institute" description="This page could not be found.">
+  <PageHeader title="We couldn’t find that page." lede="It may have moved when our website was updated. Try the treatments list, or head back to the homepage.">
+    <div class="cta" style="display:flex">
+      <a class="btn btn-primary" href="/">Back to the homepage</a>
+      <a class="btn btn-outline" href="/treatments">See treatments</a>
+    </div>
+  </PageHeader>
+</Base>

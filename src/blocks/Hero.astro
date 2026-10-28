@@ -1,0 +1,112 @@
+---
+import { Image } from 'astro:assets';
+import Icon from '../components/Icon.astro';
+import { photos } from '../lib/images';
+import { getSite, type Block } from '../lib/content';
+
+interface Props { blok: Block; doctors?: Block }
+const { blok, doctors } = Astro.props;
+const site = getSite();
+---
+<section class="hero">
+  <div class="copy">
+    <h1>{blok.headline}</h1>
+    <p class="lede">{blok.subline}</p>
+    <div class="cta">
+      <a class="btn btn-primary" href={site.booking_url}><Icon name="calendar" />Book online</a>
+      <a class="btn btn-outline" href={site.phone_href}><Icon name="phone" />Call {site.phone}</a>
+    </div>
+    <ul class="meta">
+      <li><Icon name="clock" />{site.hours_short}</li>
+      <li><Icon name="map-pin" /><a href={site.maps_url}>{site.address_line1}, Cordova</a></li>
+    </ul>
+    {doctors && (
+      <a class="docs" href="#doctors">
+        <span class="faces">
+          {doctors.doctors.map((d: Block) => (
+            <span class="face" style={`--zoom:${d.photo_zoom ?? 1};--pos:${d.photo_position ?? '50% 30%'}`}><Image src={photos[d.photo]} alt="" width={168} height={224} quality={85} /></span>
+          ))}
+        </span>
+        <span class="names">
+          {doctors.doctors.map((d: Block) => (
+            <span><strong>{d.name.replace(/\s*\(.*\)/, '')}</strong> {d.degrees}</span>
+          ))}
+        </span>
+      </a>
+    )}
+  </div>
+  <div class="media">
+    <Image
+      src={photos[blok.image]}
+      alt={blok.image_alt}
+      widths={[800, 1200, 1600, 2000, 2400]}
+      width={2400}
+      quality={82}
+      sizes="(max-width: 860px) 100vw, 52vw"
+      loading="eager"
+      fetchpriority="high"
+    />
+  </div>
+</section>
+
+<style>
+  .hero {
+    display: grid;
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1fr);
+    gap: clamp(32px, 5vw, 80px);
+    align-items: stretch;
+    max-width: var(--max);
+    margin-inline: auto;
+    padding: 12px var(--gutter) 0;
+    min-height: min(calc(100svh - 76px), 880px);
+  }
+  .copy {
+    display: flex; flex-direction: column; justify-content: center;
+    padding-block: clamp(32px, 6vh, 72px);
+  }
+  h1 { max-width: 15ch; font-size: clamp(2.6rem, 1.5rem + 3.4vw, 4.4rem); }
+  .lede { margin-top: 24px; }
+  .cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 36px; }
+  .meta {
+    list-style: none; margin: 24px 0 0; padding: 0;
+    display: flex; flex-wrap: wrap; gap: 8px 24px;
+    font-size: var(--step--1); color: var(--ink-2);
+  }
+  .meta li { display: inline-flex; align-items: center; gap: 8px; }
+  .meta :global(svg) { width: 16px; height: 16px; color: var(--jade); }
+  .meta a { text-decoration: none; }
+  .meta a:hover { text-decoration: underline; }
+  .docs {
+    display: flex; align-items: center; gap: 16px;
+    margin-top: clamp(40px, 7vh, 72px); padding-top: 24px;
+    border-top: 1px solid var(--rule);
+    text-decoration: none; max-width: 520px;
+  }
+  .faces { display: flex; flex-shrink: 0; }
+  .face {
+    width: 56px; height: 56px; border-radius: 50%; overflow: hidden;
+    border: 3px solid var(--paper); background: var(--stone);
+  }
+  .face + .face { margin-left: -14px; }
+  .face :global(img) {
+    width: 100%; height: 100%; object-fit: cover; object-position: var(--pos);
+    transform: scale(var(--zoom)); transform-origin: var(--pos);
+  }
+  .names { display: grid; gap: 2px; font-size: var(--step--1); color: var(--ink-2); line-height: 1.4; }
+  .names strong { color: var(--ink); font-weight: 600; }
+  .docs:hover strong { text-decoration: underline; }
+  .media { position: relative; border-radius: var(--radius); overflow: hidden; background: var(--stone); }
+  .media :global(img) { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 45%; }
+
+  @media (max-width: 860px) {
+    .hero { grid-template-columns: 1fr; min-height: 0; gap: 8px; padding-top: 8px; }
+    .media { order: -1; aspect-ratio: 4 / 3; }
+    .copy { padding-block: 24px 8px; }
+    .docs { margin-top: 40px; }
+  }
+  @media (max-width: 560px) {
+    .media { aspect-ratio: 5 / 4; border-radius: var(--radius-sm); }
+    .cta { display: none; }
+    .lede { margin-top: 16px; }
+  }
+</style>

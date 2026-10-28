@@ -1,0 +1,40 @@
+---
+import Base from '../../layouts/Base.astro';
+import PageHeader from '../../components/PageHeader.astro';
+import RowLinks from '../../components/RowLinks.astro';
+import BookBand from '../../components/BookBand.astro';
+import { getTreatments } from '../../lib/content';
+
+const all = getTreatments();
+const toRow = (t: (typeof all)[number]) => ({ title: t.name, detail: t.summary, href: `/treatments/${t.slug}` });
+const conditions = all.filter((t) => t.kind === 'condition').map(toRow);
+const therapies = all.filter((t) => t.kind === 'therapy').map(toRow);
+---
+<Base title="Treatments | W&E Health Institute" description="Acupuncture, SAAT allergy treatment, herbal medicine, cupping, moxibustion and more in Cordova, TN. See what we help with and how we treat it.">
+  <PageHeader
+    title="Treatments"
+    lede="Start with what you need help with, or read about the therapies we use. Not sure where you fit? Call us and we’ll talk it through."
+    image="herbal"
+    imageAlt="Bowls of dried Chinese herbs, roots and slices on a wooden table"
+  />
+  <section class="section lists stone-ground">
+    <div class="wrap layout">
+      <div>
+        <h2>What we help with</h2>
+        <div class="list"><RowLinks items={conditions} /></div>
+      </div>
+      <div>
+        <h2>How we treat</h2>
+        <div class="list"><RowLinks items={therapies} /></div>
+      </div>
+    </div>
+  </section>
+  <BookBand />
+</Base>
+
+<style>
+  .lists { background: var(--stone); }
+  .layout { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(48px, 6vw, 112px); align-items: start; }
+  .list { margin-top: clamp(28px, 3vw, 40px); }
+  @media (max-width: 960px) { .layout { grid-template-columns: 1fr; } }
+</style>

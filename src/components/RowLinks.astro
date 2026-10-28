@@ -1,0 +1,33 @@
+---
+import Icon from './Icon.astro';
+
+interface Item { title: string; detail?: string; href: string }
+interface Props { items: Item[] }
+const { items } = Astro.props;
+---
+<ul class="rows">
+  {items.map((item) => (
+    <li>
+      <a href={item.href}>
+        <span class="t">{item.title}</span>
+        {item.detail && <span class="d">{item.detail}</span>}
+        <Icon name="arrow-right" class="arr" />
+      </a>
+    </li>
+  ))}
+</ul>
+
+<style>
+  .rows { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--rule); }
+  .rows a {
+    display: grid; grid-template-columns: 1fr auto; grid-template-areas: 't arr' 'd arr';
+    gap: 4px 24px; align-items: center;
+    padding: 22px 4px; border-bottom: 1px solid var(--rule); text-decoration: none;
+    transition: padding 0.4s var(--ease-out), background-color 0.3s;
+  }
+  .t { grid-area: t; font-family: var(--font-display); font-size: var(--step-2); line-height: 1.2; }
+  .d { grid-area: d; color: var(--ink-2); }
+  .rows :global(.arr) { grid-area: arr; width: 22px; height: 22px; color: var(--jade); transition: transform 0.4s var(--ease-out); }
+  .rows a:hover { padding-left: 14px; background: var(--paper); }
+  .rows a:hover :global(.arr) { transform: translateX(4px); }
+</style>

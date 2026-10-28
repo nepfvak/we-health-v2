@@ -1,0 +1,16 @@
+---
+import Base from '../layouts/Base.astro';
+import { blocks } from '../blocks';
+import { getStory } from '../lib/content';
+
+const story = await getStory('home');
+const { body, seo_title, seo_description } = story.content;
+const doctors = body.find((b) => b.component === 'doctors');
+---
+<Base title={seo_title} description={seo_description}>
+  {body.map((blok) => {
+    const Block = blocks[blok.component as keyof typeof blocks];
+    if (!Block) return null;
+    return blok.component === 'hero' ? <Block blok={blok} doctors={doctors} /> : <Block blok={blok} />;
+  })}
+</Base>

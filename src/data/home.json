@@ -1,0 +1,156 @@
+{
+  "name": "Home",
+  "slug": "home",
+  "content": {
+    "component": "page",
+    "seo_title": "W&E Health Institute | Acupuncture & Chinese Medicine in Cordova, Memphis",
+    "seo_description": "Acupuncture, SAAT allergy treatment and Chinese herbal medicine in Cordova, TN. Two doctoral-level practitioners. VA Community Care provider. Book online.",
+    "body": [
+      {
+        "_uid": "hero-1",
+        "component": "hero",
+        "headline": "Chinese medicine, practiced with a physician’s care.",
+        "subline": "Acupuncture, allergy treatment and herbal medicine in Cordova, from two doctors trained in both Eastern and Western medicine.",
+        "image": "herbs-roots",
+        "image_alt": "Dried Chinese herbal roots and slices beside a glass cupping jar and a traditional herbal text"
+      },
+      {
+        "_uid": "doctors-1",
+        "component": "doctors",
+        "heading": "Two doctors. Two traditions. One plan for you.",
+        "intro": "Both are licensed acupuncturists and board-certified NCCAOM Diplomates, and each brings a different depth to your care.",
+        "doctors": [
+          {
+            "_uid": "doc-liang",
+            "name": "Dr. Yingjuan (Selina) Liang",
+            "degrees": "DACM, L.Ac.",
+            "photo": "dr-liang",
+            "photo_zoom": 1.3,
+            "photo_position": "50% 22%",
+            "focus": "Pain, women’s health & fertility, allergies, neurological conditions",
+            "credentials": [
+              "Doctorate in Acupuncture & Chinese Medicine; licensed in Tennessee and Mississippi",
+              "Board-certified Diplomate of Oriental Medicine (NCCAOM)",
+              "Only overseas successor of Prof. Ying Wang, master of Modern Abdominal Acupuncture",
+              "SAAT allergy treatment, certified by Dr. Nader Soliman"
+            ],
+            "link": "/doctors/selina-liang"
+          },
+          {
+            "_uid": "doc-zhao",
+            "name": "Dr. Tieqiang Zhao",
+            "degrees": "MD/PhD (China), L.Ac.",
+            "photo": "dr-zhao",
+            "photo_zoom": 1,
+            "photo_position": "50% 30%",
+            "focus": "Cardiac and internal medicine, chronic illness, Tai Chi & Medical Qigong",
+            "credentials": [
+              "MD and PhD, Harbin Medical University; former internal medicine and cardiology attending",
+              "Former Associate Professor, Peking University Health Science Center",
+              "Board-certified Diplomate (NCCAOM), 20+ years of clinical experience",
+              "Former Principal Investigator on an NIH-funded research grant"
+            ],
+            "link": "/doctors/tieqiang-zhao"
+          }
+        ]
+      },
+      {
+        "_uid": "conditions-1",
+        "component": "conditions",
+        "heading": "What we help with",
+        "intro": "Most patients come to us for one of these. Not sure if we can help? Call and ask, we’re happy to talk it through.",
+        "image": "cupping",
+        "image_alt": "Glass cupping jars placed along a patient’s back during treatment",
+        "image_position": "50% 12%",
+        "items": [
+          { "_uid": "c1", "title": "Pain", "detail": "Back, neck, joints, migraines, sciatica, old injuries", "link": "/treatments/pain-management" },
+          { "_uid": "c2", "title": "Allergies & Alpha-gal", "detail": "Food, environmental and chemical sensitivities", "link": "/treatments/saat-allergy" },
+          { "_uid": "c3", "title": "Women’s health & fertility", "detail": "Cycles, PMS, PCOS, menopause, fertility support", "link": "/treatments/fertility" },
+          { "_uid": "c4", "title": "Stress, anxiety & sleep", "detail": "Insomnia, anxiety, low mood, burnout", "link": "/treatments/stress-sleep" },
+          { "_uid": "c5", "title": "Heart & circulation", "detail": "Palpitations, chest tightness, functional cardiac concerns", "link": "/treatments/cardiac-health" },
+          { "_uid": "c6", "title": "Neurological conditions", "detail": "Neuropathy, Bell’s palsy, stroke recovery, tinnitus", "link": "/treatments/neurological" },
+          { "_uid": "c7", "title": "Cosmetic acupuncture", "detail": "Natural facial rejuvenation", "link": "/treatments/cosmetic-acupuncture" }
+        ],
+        "modalities_heading": "How we treat",
+        "modalities": "Acupuncture, herbal medicine, cupping, moxibustion, gua sha and tui na, used alone or together.",
+        "modalities_link": "/treatments"
+      },
+      {
+        "_uid": "saat-1",
+        "component": "feature",
+        "anchor": "saat",
+        "theme": "paper",
+        "image_side": "left",
+        "heading": "Allergy relief without daily medication.",
+        "body": "Soliman Auricular Allergy Treatment (SAAT) is a gentle ear-acupuncture technique that helps your body stop over-reacting to an allergen, including Alpha-gal, food, pollen and chemical sensitivities. Both of our doctors are certified SAAT providers.",
+        "points": [
+          "Know your allergen? We test for it and treat it.",
+          "Not sure what you’re reacting to? We help you screen first.",
+          "A single tiny ear needle per allergen. Most people feel little or nothing."
+        ],
+        "cta_label": "About SAAT treatment",
+        "cta_link": "/treatments/saat-allergy",
+        "image": "saat",
+        "image_alt": "A practitioner placing a fine needle in a patient’s ear"
+      },
+      {
+        "_uid": "veterans-1",
+        "component": "veterans",
+        "anchor": "veterans",
+        "heading": "Veterans: your acupuncture may cost you nothing.",
+        "body": "We’re an authorized VA Community Care Provider. With a referral from your VA doctor, eligible Veterans can receive 12 to 28 acupuncture treatments a year at no cost to them.",
+        "steps": [
+          { "_uid": "v1", "title": "Ask your VA doctor for a referral", "detail": "Tell your VA primary care provider you’d like acupuncture at W&E Health Institute." },
+          { "_uid": "v2", "title": "The VA sends us your authorization", "detail": "Once it’s approved, the VA sends the authorization straight to our clinic." },
+          { "_uid": "v3", "title": "We call you to schedule", "detail": "Our team reaches out to book your first visit." }
+        ],
+        "cta_label": "Veterans care details",
+        "cta_link": "/veterans"
+      },
+      {
+        "_uid": "reviews-1",
+        "component": "reviews",
+        "heading": "In our patients’ words",
+        "reviews": [
+          {
+            "_uid": "r1",
+            "quote": "I’ve had headaches for over 5 years… Since starting acupuncture with Dr. Liang, I truly feel like I’ve gotten my life back. After only a few treatments, my headaches and sleeping problems have almost completely disappeared.",
+            "name": "Mackenzie Hammons"
+          },
+          {
+            "_uid": "r2",
+            "quote": "Referred to Dr. Liang for daily icepick headaches and loss of facial feeling. Acupuncture worked wonders that over 15 years of specialists and drugs could not.",
+            "name": "Michael O’Driscoll"
+          },
+          {
+            "_uid": "r3",
+            "quote": "Dr. Liang is highly skilled, very kind and genuinely cares for her patients. I highly recommend her to anyone looking for professional and attentive acupuncture care.",
+            "name": "Lisha Wu"
+          }
+        ],
+        "source_label": "Google reviews",
+        "cta_label": "Read all reviews on Google"
+      },
+      {
+        "_uid": "coverage-1",
+        "component": "coverage",
+        "heading": "Insurance & payment",
+        "items": [
+          { "_uid": "p1", "title": "UnitedHealthcare", "detail": "Accepted." },
+          { "_uid": "p2", "title": "FSA & HSA", "detail": "Pay with your health savings or flexible spending card." },
+          { "_uid": "p3", "title": "Other insurance", "detail": "If your plan covers acupuncture but we’re out of network, we’ll give you a superbill to submit for reimbursement." },
+          { "_uid": "p4", "title": "VA Community Care", "detail": "Usually no cost to eligible Veterans with a VA referral." }
+        ]
+      },
+      {
+        "_uid": "visit-1",
+        "component": "visit",
+        "anchor": "visit",
+        "heading": "Visit the clinic",
+        "body": "We’re in Cordova, serving Memphis, Germantown, Bartlett and the surrounding area. Book online any time, or call us during opening hours.",
+        "image": "interior",
+        "image_alt": "The W&E Health Institute front desk and waiting area"
+      }
+    ]
+  }
+}

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://wehealthinstitute.com/sitemap-index.xml

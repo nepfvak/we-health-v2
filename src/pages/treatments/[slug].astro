@@ -1,0 +1,100 @@
+---
+import { Image } from 'astro:assets';
+import Base from '../../layouts/Base.astro';
+import PageHeader from '../../components/PageHeader.astro';
+import RowLinks from '../../components/RowLinks.astro';
+import BookBand from '../../components/BookBand.astro';
+import Icon from '../../components/Icon.astro';
+import { photos } from '../../lib/images';
+import { getDoctor, getSite, getTreatment, getTreatments } from '../../lib/content';
+
+export function getStaticPaths() {
+  return getTreatments().map((t) => ({ params: { slug: t.slug } }));
+}
+
+const t = getTreatment(Astro.params.slug!)!;
+const site = getSite();
+const doctors = t.doctors.map((s) => getDoctor(s)).filter((d) => d !== undefined);
+const related = t.related
+  .map((s) => getTreatment(s))
+  .filter((r) => r !== undefined)
+  .map((r) => ({ title: r.name, detail: r.summary, href: `/treatments/${r.slug}` }));
+---
+<Base title={`${t.name} | W&E Health Institute, Cordova TN`} description={t.lede}>
+  <PageHeader title={t.name} lede={t.lede} image={t.image} imageAlt={t.image_alt}>
+    <div class="cta">
+      <a class="btn btn-primary" href={site.booking_url}><Icon name="calendar" />{('cta_label' in t && t.cta_label) || 'Book online'}</a>
+      <a class="btn btn-outline" href={site.phone_href}><Icon name="phone" />Call {site.phone}</a>
+    </div>
+  </PageHeader>
+
+  <section class="section detail">
+    <div class="wrap layout">
+      <div class="prose">
+        {t.body.map((b) => (
+          <>
+            <h2>{b.heading}</h2>
+            <p>{b.text}</p>
+          </>
+        ))}
+        {'show_class_status' in t && t.show_class_status && <p class="status">{site.tai_chi_text}</p>}
+      </div>
+      <aside>
+        <h2 class="aside-title">{t.kind === 'condition' ? 'We commonly help with' : 'Often used for'}</h2>
+        <ul class="helps">
+          {t.helps.map((h) => <li>{h}</li>)}
+        </ul>
+        <h2 class="aside-title">{doctors.length > 1 ? 'Your doctors' : 'Your doctor'}</h2>
+        <ul class="docs">
+          {doctors.map((d) => (
+            <li>
+              <a href={`/doctors/${d.slug}`}>
+                <span class="face" style={`--zoom:${d.photo_zoom};--pos:${d.photo_position}`}>
+                  <Image src={photos[d.photo]} alt="" width={168} height={224} quality={85} />
+                </span>
+                <span><strong>{d.name.replace(/\s*\(.*\)/, '')}</strong><br />{d.degrees}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  {related.length > 0 && (
+    <section class="section related stone-ground">
+      <div class="wrap layout-rel">
+        <h2>Related treatments</h2>
+        <RowLinks items={related} />
+      </div>
+    </section>
+  )}
+
+  <BookBand />
+</Base>
+
+<style>
+  .detail { padding-top: 0; }
+  .layout { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: clamp(48px, 7vw, 120px); align-items: start; }
+  .prose > h2:first-child { margin-top: 0; }
+  .status { padding-top: 16px; border-top: 1px solid var(--rule); color: var(--ink-2); }
+  aside { position: sticky; top: 108px; }
+  .aside-title { font-family: var(--font-body); font-size: 1rem; font-weight: 600; letter-spacing: 0; }
+  .aside-title + * { margin-top: 12px; }
+  .helps, .docs { list-style: none; margin: 0 0 40px; padding: 0; border-top: 1px solid var(--rule); }
+  .helps li { padding: 12px 0; border-bottom: 1px solid var(--rule); }
+  .docs a {
+    display: flex; align-items: center; gap: 14px; padding: 14px 0;
+    border-bottom: 1px solid var(--rule); text-decoration: none; color: var(--ink-2); font-size: var(--step--1);
+  }
+  .docs strong { color: var(--ink); font-size: var(--step-0); font-weight: 600; }
+  .docs a:hover strong { text-decoration: underline; }
+  .face { width: 52px; height: 52px; border-radius: 50%; overflow: hidden; flex-shrink: 0; background: var(--stone); }
+  .face :global(img) { width: 100%; height: 100%; object-fit: cover; object-position: var(--pos); transform: scale(var(--zoom)); transform-origin: var(--pos); }
+  .related { background: var(--stone); }
+  .layout-rel { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: clamp(32px, 6vw, 112px); }
+  @media (max-width: 900px) {
+    .layout, .layout-rel { grid-template-columns: 1fr; }
+    aside { position: static; }
+  }
+</style>

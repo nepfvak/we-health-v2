@@ -1,0 +1,54 @@
+{
+  "name": "W&E Health Institute",
+  "tagline": "Acupuncture & Chinese Medicine",
+  "phone": "(901) 340-6433",
+  "phone_href": "tel:+19013406433",
+  "email": "wehiusa@gmail.com",
+  "booking_url": "https://wehealthinstitute.janeapp.com",
+  "address_line1": "985 Cordova Station Ave, Ste 101",
+  "address_line2": "Cordova, TN 38018",
+  "maps_url": "https://maps.google.com/?q=985+Cordova+Station+Ave+Ste+101,+Cordova,+TN+38018",
+  "hours": [
+    {
+      "days": "Monday – Saturday",
+      "time": "8:00 am – 6:00 pm"
+    },
+    {
+      "days": "Sunday",
+      "time": "Closed"
+    }
+  ],
+  "hours_short": "Mon–Sat, 8am–6pm",
+  "nav": [
+    {
+      "label": "Treatments",
+      "href": "/treatments"
+    },
+    {
+      "label": "Our doctors",
+      "href": "/doctors"
+    },
+    {
+      "label": "SAAT allergy",
+      "href": "/treatments/saat-allergy"
+    },
+    {
+      "label": "Veterans",
+      "href": "/veterans"
+    },
+    {
+      "label": "Reviews",
+      "href": "/reviews"
+    },
+    {
+      "label": "Contact",
+      "href": "/contact"
+    }
+  ],
+  "gift_card_url": "https://squareup.com/gift/MLP2MCJWPQHBM/order",
+  "instagram_url": "https://www.instagram.com/wehealthinstitute/",
+  "facebook_url": "https://www.facebook.com/W-E-Health-Institute-113804167960042",
+  "reviews_url": "https://www.google.com/search?q=W%26E+Health+Institute+Cordova+reviews",
+  "tai_chi_status": "coming_soon",
+  "tai_chi_text": "Tai Chi & Medical Qigong classes are coming soon."
+}

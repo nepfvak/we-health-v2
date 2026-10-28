@@ -1,0 +1,23 @@
+---
+import Icon from './Icon.astro';
+import { getSite } from '../lib/content';
+const site = getSite();
+---
+<div class="mobile-bar" aria-label="Book or call">
+  <a class="btn btn-primary" href={site.booking_url}><Icon name="calendar" />Book online</a>
+  <a class="btn btn-outline" href={site.phone_href}><Icon name="phone" />Call</a>
+</div>
+
+<style>
+  .mobile-bar { display: none; }
+  @media (max-width: 560px) {
+    .mobile-bar {
+      position: fixed; inset: auto 0 0 0; z-index: 60;
+      display: grid; grid-template-columns: 1.4fr 1fr; gap: 10px;
+      padding: 12px 16px calc(12px + env(safe-area-inset-bottom));
+      background: var(--paper); border-top: 1px solid var(--rule);
+    }
+    .mobile-bar .btn { min-height: 50px; padding: 0 16px; }
+    :global(body) { padding-bottom: calc(76px + env(safe-area-inset-bottom)); }
+  }
+</style>

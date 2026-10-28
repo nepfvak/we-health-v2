@@ -1,0 +1,37 @@
+---
+import Icon from './Icon.astro';
+import { getSite } from '../lib/content';
+
+interface Props { heading?: string; body?: string }
+const site = getSite();
+const {
+  heading = 'Ready for your first visit?',
+  body = 'Book online any time, or call us Monday to Saturday, 8am to 6pm.',
+} = Astro.props;
+---
+<section class="section book-band">
+  <div class="wrap">
+    <div class="layout">
+      <div>
+        <h2>{heading}</h2>
+        <p class="body">{body}</p>
+      </div>
+      <div class="cta">
+        <a class="btn btn-primary" href={site.booking_url}><Icon name="calendar" />Book online</a>
+        <a class="btn btn-outline" href={site.phone_href}><Icon name="phone" />{site.phone}</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .book-band { padding-top: 0; }
+  :global(.stone-ground) + .book-band { padding-top: var(--section); }
+  :global(.stone-ground) + .book-band .layout { border-top: 0; padding-top: 0; }
+  .layout { border-top: 1px solid var(--rule); padding-top: clamp(40px, 5vw, 72px); display: grid; grid-template-columns: 1fr auto; gap: 32px 64px; align-items: end; }
+  h2 { max-width: 18ch; }
+  .body { margin-top: 16px; color: var(--ink-2); font-size: var(--step-1); max-width: 46ch; }
+  .cta { display: flex; flex-wrap: wrap; gap: 12px; }
+  @media (max-width: 860px) { .layout { grid-template-columns: 1fr; } }
+  @media (max-width: 560px) { .cta { display: none; } }
+</style>

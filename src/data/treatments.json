@@ -1,0 +1,506 @@
+[
+  {
+    "slug": "pain-management",
+    "kind": "condition",
+    "name": "Pain",
+    "summary": "Back, neck, joints, migraines, sciatica, old injuries",
+    "lede": "Acupuncture is one of the most widely used treatments for pain of almost every kind.",
+    "image": "pain",
+    "image_alt": "An older woman holding her sore wrist",
+    "body": [
+      {
+        "heading": "How we approach pain",
+        "text": "In Chinese medicine, pain is understood as something blocking the free flow of qi and blood. Rather than treating only the spot that hurts, your doctor looks for what is driving it: the pattern of the pain, what makes it better or worse, how you sleep, and how stress affects it. Treatment is built around that picture, not just the location."
+      },
+      {
+        "heading": "Without relying on medication",
+        "text": "Many of our patients come to us looking for options alongside, or instead of, pain medication. Acupuncture can be combined with cupping, moxibustion, gua sha and herbal medicine, and it works well alongside physical therapy and the care you already receive from your doctor."
+      }
+    ],
+    "helps": [
+      "Lower back pain and sciatica",
+      "Neck and shoulder pain",
+      "Knee, hip, elbow and hand pain",
+      "Headaches and migraines",
+      "TMJ",
+      "Carpal tunnel and plantar fasciitis",
+      "Arthritis and fibromyalgia",
+      "Shingles and nerve pain",
+      "Old injuries and post-surgical pain",
+      "Cancer-related pain"
+    ],
+    "doctors": [
+      "selina-liang",
+      "tieqiang-zhao"
+    ],
+    "related": [
+      "acupuncture",
+      "cupping",
+      "moxibustion",
+      "tui-na"
+    ]
+  },
+  {
+    "slug": "saat-allergy",
+    "kind": "condition",
+    "name": "Allergies & Alpha-gal",
+    "summary": "SAAT treatment for food, environmental and chemical sensitivities",
+    "lede": "Soliman Auricular Allergy Treatment (SAAT) is a gentle ear-acupuncture technique that helps your body stop over-reacting to an allergen.",
+    "image": "saat",
+    "image_alt": "A practitioner placing a fine needle in a patient’s ear",
+    "body": [
+      {
+        "heading": "What SAAT is",
+        "text": "SAAT was developed by Dr. Nader Soliman. It uses a tiny, specialized needle placed in the ear to help desensitize the immune system to a specific allergen. It is drug-free, and most people feel little or nothing during treatment. Both of our doctors are certified SAAT providers, and Dr. Liang trained directly with Dr. Soliman."
+      },
+      {
+        "heading": "How treatment works",
+        "text": "If you already know what you are allergic to, we test for that allergen and treat it. If you are not sure, we help you screen first, then treat what we find. Each allergen is treated separately, and your doctor will tell you what follow-up to expect."
+      },
+      {
+        "heading": "Alpha-gal syndrome",
+        "text": "Alpha-gal is an allergy to red meat and other mammal products, usually triggered by a tick bite and increasingly common in the Mid-South."
+      }
+    ],
+    "helps": [
+      "Alpha-gal: beef, pork, lamb, venison, dairy and other mammal products",
+      "Food: gluten and wheat, soy, dairy, corn, eggs, nuts, shellfish and more",
+      "Environmental: pollen, trees, grasses, dust, mold and animal dander",
+      "Medications: penicillin and other drug sensitivities",
+      "Chemicals, preservatives and insect venom"
+    ],
+    "doctors": [
+      "selina-liang",
+      "tieqiang-zhao"
+    ],
+    "related": [
+      "acupuncture"
+    ]
+  },
+  {
+    "slug": "fertility",
+    "kind": "condition",
+    "name": "Women’s health & fertility",
+    "summary": "Cycles, PMS, PCOS, menopause, fertility support",
+    "lede": "Gentle, individualized support through every stage, from painful periods to trying to conceive to menopause.",
+    "image": "consult",
+    "image_alt": "A doctor talking with a couple during a consultation",
+    "body": [
+      {
+        "heading": "Fertility support",
+        "text": "Dr. Liang was one of twelve practitioners nationwide selected for the inaugural Overseas Chinese Medicine Mentorship in the USA, studying reproductive health and infertility under Prof. Ming Jin. Fertility care combines acupuncture with herbal medicine where appropriate, and it can be used alongside IVF or IUI."
+      },
+      {
+        "heading": "Cycles and hormones",
+        "text": "Chinese medicine looks at your whole cycle, not one symptom. Your doctor will ask about timing, flow, pain, sleep, digestion and mood, and use that picture to guide acupuncture and herbal treatment."
+      }
+    ],
+    "helps": [
+      "Fertility support, including alongside IVF and IUI",
+      "Irregular or painful periods",
+      "PMS",
+      "PCOS and endometriosis",
+      "Fibroids",
+      "Menopause and hot flashes",
+      "Mastitis",
+      "Fatigue and hormonal balance"
+    ],
+    "doctors": [
+      "selina-liang"
+    ],
+    "related": [
+      "acupuncture",
+      "herbal-medicine",
+      "five-element"
+    ]
+  },
+  {
+    "slug": "stress-sleep",
+    "kind": "condition",
+    "name": "Stress, anxiety & sleep",
+    "summary": "Insomnia, anxiety, low mood, burnout",
+    "lede": "Acupuncture helps calm an over-active nervous system, and many patients tell us their first session was the most relaxed they’d felt in months.",
+    "image": "moxa-cones",
+    "image_alt": "Burning moxa cones resting on a dish of dried herbs",
+    "body": [
+      {
+        "heading": "Body and mind together",
+        "text": "Chinese medicine has always treated emotional and physical health as one system. Anxiety, poor sleep and low mood often show up alongside headaches, digestive problems or tension, and treatment addresses them together."
+      },
+      {
+        "heading": "Working alongside your other care",
+        "text": "Acupuncture can be used alongside counseling, therapy or medication. Please keep your other providers informed, and never stop a prescribed medication without talking to the doctor who prescribed it."
+      }
+    ],
+    "helps": [
+      "Insomnia and poor sleep",
+      "Anxiety and panic attacks",
+      "Stress and burnout",
+      "Low mood and depression",
+      "PTSD",
+      "Support when quitting smoking or alcohol"
+    ],
+    "doctors": [
+      "selina-liang",
+      "tieqiang-zhao"
+    ],
+    "related": [
+      "acupuncture",
+      "five-element",
+      "tai-chi-qigong"
+    ]
+  },
+  {
+    "slug": "cardiac-health",
+    "kind": "condition",
+    "name": "Heart & circulation",
+    "summary": "Palpitations, chest tightness, functional cardiac concerns",
+    "lede": "Integrative support for functional heart symptoms, led by a doctor trained in Western internal medicine and cardiology.",
+    "image": "cardiac",
+    "image_alt": "An older man resting his hand on his chest",
+    "body": [
+      {
+        "heading": "Functional cardiac concerns",
+        "text": "Some people have palpitations, chest tightness, an irregular heartbeat or breathlessness, yet tests show no structural heart disease. Chinese medicine treats these as patterns of imbalance, using acupuncture, herbal medicine and gentle movement such as Tai Chi and Medical Qigong."
+      },
+      {
+        "heading": "Dr. Zhao’s background",
+        "text": "Dr. Zhao trained as a physician at Harbin Medical University and practiced internal medicine and cardiology before focusing on Chinese medicine. He is a professional member of the American Heart Association and the American Stroke Association, and serves as Executive Director of the World Federation of Chinese Medicine Societies’ Cardiovascular Disease Committee."
+      },
+      {
+        "heading": "Important",
+        "text": "This care does not replace your cardiologist. If you have chest pain, shortness of breath or other signs of a heart emergency, call 911."
+      }
+    ],
+    "helps": [
+      "Palpitations",
+      "Chest tightness without a structural cause",
+      "Arrhythmia, AFib and PVCs (alongside your cardiologist’s care)",
+      "High or low blood pressure",
+      "Fatigue and breathlessness"
+    ],
+    "doctors": [
+      "tieqiang-zhao"
+    ],
+    "related": [
+      "acupuncture",
+      "herbal-medicine",
+      "tai-chi-qigong"
+    ]
+  },
+  {
+    "slug": "neurological",
+    "kind": "condition",
+    "name": "Neurological conditions",
+    "summary": "Neuropathy, Bell’s palsy, stroke recovery, tinnitus",
+    "lede": "Specialized techniques, including scalp acupuncture, to support recovery and quality of life with neurological conditions.",
+    "image": "consultation",
+    "image_alt": "A doctor in a white coat talking with a patient",
+    "body": [
+      {
+        "heading": "Scalp acupuncture",
+        "text": "Scalp acupuncture places fine needles along areas of the scalp that correspond to regions of the brain. Dr. Liang serves as Deputy Secretary General and Executive Director of the World Federation of Chinese Medicine Societies’ Scalp Needle Committee and uses Jiao’s scalp acupuncture in her practice."
+      },
+      {
+        "heading": "Part of a wider plan",
+        "text": "For conditions such as stroke recovery, Parkinson’s or MS, acupuncture is used alongside your neurologist’s care and any rehabilitation you are already doing."
+      }
+    ],
+    "helps": [
+      "Peripheral neuropathy",
+      "Bell’s palsy",
+      "Stroke recovery",
+      "Tinnitus",
+      "Trigeminal neuralgia",
+      "MS and Parkinson’s (supportive care)"
+    ],
+    "doctors": [
+      "selina-liang"
+    ],
+    "related": [
+      "acupuncture"
+    ]
+  },
+  {
+    "slug": "cosmetic-acupuncture",
+    "kind": "condition",
+    "name": "Cosmetic acupuncture",
+    "summary": "Natural facial rejuvenation",
+    "lede": "A natural approach to facial rejuvenation using very fine, sterile needles placed at specific points on the face and body.",
+    "image": "cosmetic",
+    "image_alt": "A woman relaxing during a facial treatment",
+    "body": [
+      {
+        "heading": "How it works",
+        "text": "Cosmetic acupuncture places very fine needles at points on the face and body to stimulate the skin’s own renewal. It is often combined with facial gua sha and manual facial techniques. Because it treats the whole person, many patients also notice better sleep and less stress."
+      },
+      {
+        "heading": "A course, not a single session",
+        "text": "Results build gradually over a course of treatments. Your doctor will talk through what to expect at your first visit."
+      }
+    ],
+    "helps": [
+      "Fine lines and skin tone",
+      "Skin vitality and texture",
+      "Facial puffiness",
+      "Overall relaxation and wellbeing"
+    ],
+    "doctors": [
+      "selina-liang"
+    ],
+    "related": [
+      "acupuncture",
+      "gua-sha"
+    ]
+  },
+  {
+    "slug": "acupuncture",
+    "kind": "therapy",
+    "name": "Acupuncture",
+    "summary": "Fine, sterile needles at precise points to restore balance",
+    "lede": "Sterile, hair-thin needles placed at specific points to relieve symptoms and help the body rebalance itself.",
+    "image": "ear-needle",
+    "image_alt": "A practitioner placing a fine needle in a patient’s ear",
+    "body": [
+      {
+        "heading": "What it is",
+        "text": "Acupuncture has been practiced for thousands of years in China and is now widely used across the United States. Fine, single-use sterile needles are placed at specific points along the body’s meridians. Most people feel very little, and many find treatment deeply relaxing."
+      },
+      {
+        "heading": "The techniques we use",
+        "text": "Our doctors draw on several traditions and choose what suits you: traditional acupuncture, Five Element acupuncture, Modern Abdominal Acupuncture (Dr. Liang is the only overseas successor of its founder, Prof. Ying Wang), Jiao’s scalp acupuncture, auricular (ear) acupuncture, Tung’s acupuncture and motion-style acupuncture."
+      }
+    ],
+    "helps": [
+      "Pain of almost any kind",
+      "Allergies (through SAAT)",
+      "Women’s health and fertility",
+      "Stress, anxiety and sleep",
+      "Digestive problems",
+      "Neurological conditions"
+    ],
+    "doctors": [
+      "selina-liang",
+      "tieqiang-zhao"
+    ],
+    "related": [
+      "pain-management",
+      "five-element",
+      "saat-allergy"
+    ]
+  },
+  {
+    "slug": "herbal-medicine",
+    "kind": "therapy",
+    "name": "Herbal medicine",
+    "summary": "Concentrated granules and pills, prescribed for you",
+    "lede": "Chinese herbal formulas, prescribed for your pattern and adjusted as you improve.",
+    "image": "herbal",
+    "image_alt": "Bowls of dried Chinese herbs, roots and slices on a wooden table",
+    "body": [
+      {
+        "heading": "How we prescribe",
+        "text": "Formulas are combinations of leaves, roots, flowers and other natural ingredients, chosen according to Chinese medicine diagnosis, including tongue and pulse. We prescribe concentrated granules and herbal pills, which are easier to take than traditional raw herbs."
+      },
+      {
+        "heading": "Safety",
+        "text": "Please tell us about every medication and supplement you take, and whether you are pregnant or trying to conceive. Your doctor will check for interactions before prescribing."
+      }
+    ],
+    "helps": [
+      "Women’s health and fertility",
+      "Digestive problems",
+      "Colds, coughs and immunity",
+      "Sleep and stress",
+      "Skin conditions",
+      "Long-term recovery and fatigue"
+    ],
+    "doctors": [
+      "selina-liang",
+      "tieqiang-zhao"
+    ],
+    "related": [
+      "fertility",
+      "acupuncture"
+    ]
+  },
+  {
+    "slug": "cupping",
+    "kind": "therapy",
+    "name": "Cupping",
+    "summary": "Gentle suction to ease tension and improve circulation",
+    "lede": "Glass cups create gentle suction on the skin to relax tight muscles, ease pain and improve circulation.",
+    "image": "cupping-placing",
+    "image_alt": "A practitioner placing glass cups along a patient’s back",
+    "body": [
+      {
+        "heading": "What to expect",
+        "text": "Cups are placed on the back, shoulders or other areas and left for a few minutes, or moved gently across the skin. It usually feels like a deep, pulling massage. Cupping can leave round marks that look like bruises but are not painful, and they fade within a few days."
+      },
+      {
+        "heading": "Included with treatment",
+        "text": "We offer Sancai fire cupping, and cupping is often added to an acupuncture session when it will help."
+      }
+    ],
+    "helps": [
+      "Back, neck and shoulder tension",
+      "Muscle soreness and sports recovery",
+      "Colds and coughs",
+      "Stress and fatigue"
+    ],
+    "doctors": [
+      "selina-liang",
+      "tieqiang-zhao"
+    ],
+    "related": [
+      "pain-management",
+      "gua-sha",
+      "moxibustion"
+    ]
+  },
+  {
+    "slug": "moxibustion",
+    "kind": "therapy",
+    "name": "Moxibustion",
+    "summary": "Warming therapy with the herb mugwort",
+    "lede": "A warming therapy that uses moxa, made from the herb mugwort, to bring heat and circulation to specific points.",
+    "image": "moxibustion",
+    "image_alt": "Small smoking moxa cones resting on slices of herb along a patient’s back",
+    "body": [
+      {
+        "heading": "How it works",
+        "text": "Moxa is burned close to the skin or on a protective base so that you feel a gentle, spreading warmth. It is used where Chinese medicine identifies cold or weakness, and is often combined with acupuncture in the same visit."
+      }
+    ],
+    "helps": [
+      "Cold, achy joints and lower back",
+      "Digestive weakness",
+      "Menstrual cramps",
+      "Fatigue and low energy"
+    ],
+    "doctors": [
+      "selina-liang",
+      "tieqiang-zhao"
+    ],
+    "related": [
+      "pain-management",
+      "cupping",
+      "acupuncture"
+    ]
+  },
+  {
+    "slug": "gua-sha",
+    "kind": "therapy",
+    "name": "Gua sha",
+    "summary": "Smooth-edged tool scraping to release tension",
+    "lede": "A smooth-edged tool is stroked firmly along the skin to release tension and improve circulation.",
+    "image": "gua-sha",
+    "image_alt": "A jade gua sha tool being stroked along a patient’s neck and shoulder",
+    "body": [
+      {
+        "heading": "What to expect",
+        "text": "Gua sha uses a jade, horn or ceramic tool with oil. It can leave temporary redness that fades within a few days. A gentler version is used on the face as part of cosmetic treatment."
+      }
+    ],
+    "helps": [
+      "Neck and shoulder tension",
+      "Muscle pain and stiffness",
+      "Headaches",
+      "Facial rejuvenation (facial gua sha)"
+    ],
+    "doctors": [
+      "selina-liang",
+      "tieqiang-zhao"
+    ],
+    "related": [
+      "cupping",
+      "cosmetic-acupuncture",
+      "tui-na"
+    ]
+  },
+  {
+    "slug": "tui-na",
+    "kind": "therapy",
+    "name": "Tui na",
+    "summary": "Chinese therapeutic massage, including for children",
+    "lede": "Chinese therapeutic massage that works on muscles and acupressure points, used for adults and, in a gentle form, for children.",
+    "image": "tui-na",
+    "image_alt": "A practitioner massaging a patient’s shoulder",
+    "body": [
+      {
+        "heading": "What it is",
+        "text": "Tui na combines pressing, kneading and stretching along the meridians. It can stand alone or be combined with acupuncture. Pediatric tui na is a gentle, needle-free option for children."
+      }
+    ],
+    "helps": [
+      "Muscle and joint pain",
+      "Neck, head and scalp tension",
+      "Children’s digestion, sleep and immunity (pediatric tui na)"
+    ],
+    "doctors": [
+      "selina-liang"
+    ],
+    "related": [
+      "pain-management",
+      "gua-sha"
+    ]
+  },
+  {
+    "slug": "five-element",
+    "kind": "therapy",
+    "name": "Five Element acupuncture",
+    "summary": "Treating body, mind and spirit together",
+    "lede": "A classical style of acupuncture built on the Five Elements (Wood, Fire, Earth, Metal and Water) that treats body, mind and spirit together.",
+    "image": "herb-spoons",
+    "image_alt": "Wooden spoons holding different dried Chinese herbs",
+    "body": [
+      {
+        "heading": "What makes it different",
+        "text": "Five Element acupuncture looks for the root imbalance behind your symptoms, and gives particular attention to emotional and spiritual wellbeing. Treatments often use fewer needles, chosen with care."
+      }
+    ],
+    "helps": [
+      "Long-standing or root-cause conditions",
+      "Emotional wellbeing",
+      "Stress and fatigue",
+      "Allergies"
+    ],
+    "doctors": [
+      "selina-liang"
+    ],
+    "related": [
+      "acupuncture",
+      "stress-sleep"
+    ]
+  },
+  {
+    "slug": "tai-chi-qigong",
+    "kind": "therapy",
+    "name": "Tai Chi & Medical Qigong",
+    "summary": "Gentle movement and breathing for balance and resilience",
+    "lede": "Slow, mindful movement and breathing practices that build balance, strength and calm.",
+    "image": "tai-chi",
+    "image_alt": "A man practicing Tai Chi in a garden",
+    "body": [
+      {
+        "heading": "Taught by Dr. Zhao",
+        "text": "Dr. Zhao studied Tai Chi with Masters Zhibin Zhang and Songquan Yang and Medical Qigong with Masters Qiduan Li and Junfeng Li. He is a national-level judge of Tai Chi and Kung Fu with the USA Wushu Kungfu Federation."
+      }
+    ],
+    "helps": [
+      "Balance and fall prevention",
+      "Stress and sleep",
+      "Heart and circulation",
+      "Gentle strength and flexibility"
+    ],
+    "doctors": [
+      "tieqiang-zhao"
+    ],
+    "related": [
+      "cardiac-health",
+      "stress-sleep"
+    ],
+    "show_class_status": true,
+    "cta_label": "Book a visit with Dr. Zhao"
+  }
+]

@@ -1,0 +1,98 @@
+---
+import { Image } from 'astro:assets';
+import Base from '../../layouts/Base.astro';
+import BookBand from '../../components/BookBand.astro';
+import RowLinks from '../../components/RowLinks.astro';
+import Icon from '../../components/Icon.astro';
+import { photos } from '../../lib/images';
+import { getDoctor, getDoctors, getSite, getTreatments } from '../../lib/content';
+
+export function getStaticPaths() {
+  return getDoctors().map((d) => ({ params: { slug: d.slug } }));
+}
+
+const d = getDoctor(Astro.params.slug!)!;
+const site = getSite();
+const treats = getTreatments()
+  .filter((t) => t.doctors.includes(d.slug) && t.kind === 'condition')
+  .map((t) => ({ title: t.name, detail: t.summary, href: `/treatments/${t.slug}` }));
+---
+<Base title={`${d.name}, ${d.degrees} | W&E Health Institute`} description={d.lede}>
+  <header class="head">
+    <div class="wrap layout">
+      <div class="portrait" style={`--zoom:${d.photo_zoom};--pos:${d.photo_position}`}>
+        <Image src={photos[d.photo]} alt={`Portrait of ${d.name}`} widths={[480, 720, 960, 1280]} quality={85} sizes="(max-width: 860px) 60vw, 420px" loading="eager" />
+      </div>
+      <div class="copy">
+        <h1>{d.name}</h1>
+        <p class="deg">{d.degrees}</p>
+        <p class="lede">{d.lede}</p>
+        <div class="cta">
+          <a class="btn btn-primary" href={site.booking_url}><Icon name="calendar" />Book with {d.short_name}</a>
+          <a class="btn btn-outline" href={site.phone_href}><Icon name="phone" />Call {site.phone}</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="section body">
+    <div class="wrap layout-body">
+      <div class="prose">
+        <h2>About {d.short_name}</h2>
+        {d.about.map((p) => <p>{p}</p>)}
+        {'community' in d && d.community && (
+          <>
+            <h2>In the community</h2>
+            <p>{d.community}</p>
+          </>
+        )}
+      </div>
+      <aside>
+        <h2 class="aside-title">Areas of focus</h2>
+        <ul class="list">{d.specialties.map((s) => <li>{s}</li>)}</ul>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section creds">
+    <div class="wrap layout-creds">
+      <h2>Training & credentials</h2>
+      <ul class="list">{d.credentials.map((c) => <li>{c}</li>)}</ul>
+    </div>
+  </section>
+
+  {treats.length > 0 && (
+    <section class="section">
+      <div class="wrap layout-creds">
+        <h2>Conditions {d.short_name} treats</h2>
+        <RowLinks items={treats} />
+      </div>
+    </section>
+  )}
+
+  <BookBand heading={`Book a visit with ${d.short_name}`} />
+</Base>
+
+<style>
+  .head { padding-block: clamp(40px, 6vw, 88px) clamp(56px, 7vw, 104px); }
+  .layout { display: grid; grid-template-columns: minmax(220px, 420px) 1fr; gap: clamp(32px, 6vw, 96px); align-items: center; }
+  .portrait { aspect-ratio: 3 / 4; border-radius: var(--radius); overflow: hidden; background: var(--stone); }
+  .portrait :global(img) { width: 100%; height: 100%; object-fit: cover; object-position: var(--pos); transform: scale(var(--zoom)); transform-origin: var(--pos); }
+  h1 { font-size: var(--step-3); }
+  .deg { margin-top: 10px; font-weight: 600; color: var(--ink-2); }
+  .lede { margin-top: 20px; }
+  .cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+  .body { padding-top: 0; }
+  .layout-body { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: clamp(48px, 7vw, 120px); align-items: start; }
+  .prose > h2:first-child { margin-top: 0; }
+  .aside-title { font-family: var(--font-body); font-size: 1rem; font-weight: 600; letter-spacing: 0; margin-bottom: 12px; }
+  .list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--rule); }
+  .list li { padding: 14px 0; border-bottom: 1px solid var(--rule); }
+  .creds { background: var(--stone); }
+  .layout-creds { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: clamp(32px, 6vw, 112px); align-items: start; }
+  @media (max-width: 860px) {
+    .layout, .layout-body, .layout-creds { grid-template-columns: 1fr; }
+    .portrait { max-width: 320px; }
+  }
+  @media (max-width: 560px) { .cta { display: none; } }
+</style>
